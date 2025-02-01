@@ -1,0 +1,25 @@
+//Print Fibonacci Sequence
+
+#include <iostream> // Include library for input and output
+using namespace std;
+
+int main() {
+    int num; // Number of terms in Fibonacci series
+    int n1 = 0, n2 = 1, n3; // First two Fibonacci numbers 
+
+    // Input the number of terms
+    cout << "Enter the number of terms for the Fibonacci series: ";
+    cin >> num;
+
+    cout << "\n" << n1 << " " << n2 << " "; // Print the first two Fibonacci numbers
+
+    // Print the Fibonacci series
+    for (int i = 2; i <num; i++) {
+        n3 = n1 + n2; // Calculate the next Fibonacci number
+        cout << n3 << " "; // Print it
+        n1 = n2; // Update n1
+        n2 = n3; // Update n2
+    }
+
+    return 0;
+}
